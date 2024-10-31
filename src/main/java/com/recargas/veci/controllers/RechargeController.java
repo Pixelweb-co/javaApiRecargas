@@ -40,9 +40,8 @@ public class RechargeController {
             @RequestBody RechargeRequest rechargeRequest) {
 
         // Validaciones
-        if (!rechargeRequest.getCellPhone().matches("^3\\d{9}$")) {
+        if (!rechargeRequest.getCellPhone().matches("^3\\d{9}$"))
             return ResponseEntity.badRequest().body(new TransactionResponse("Número de teléfono inválido", null, null, 0));
-        }
         if (rechargeRequest.getValue() < 1000 || rechargeRequest.getValue() > 100000) {
             return ResponseEntity.badRequest().body(new TransactionResponse("Valor fuera de rango", null, null, 0));
         }
@@ -53,10 +52,6 @@ public class RechargeController {
         return ResponseEntity.ok(transactionResponse);
     }
 
-    @GetMapping("/history")
-    public ResponseEntity<List<TransactionResponse>> getTransactionHistory() {
-        List<TransactionResponse> transactions = transactionService.getAllTransactions(); // Usar el servicio de transacciones
-        return ResponseEntity.ok(transactions);
-    }
+
 }
 
