@@ -13,7 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "vecirecargas-svzuxwt2u-pixelweb-co1s-projects.vercel.app")
 public class TransactionController {
 
     private final TransactionService transactionService;
