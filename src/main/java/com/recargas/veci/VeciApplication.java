@@ -18,7 +18,7 @@ public class VeciApplication {
 		return new WebMvcConfigurer() {
 			@Override
 			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/**").allowedOrigins("*").allowedMethods("*").allowedHeaders("*");
+				registry.addMapping("/**").allowedOrigins("https://main.dcuh1ezfq6oc3.amplifyapp.com").allowedMethods("*").allowedHeaders("*");
 			}
 		};
 	}
