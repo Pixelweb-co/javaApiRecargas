@@ -11,7 +11,6 @@ import com.recargas.veci.services.TransactionService;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api/recharge")
 public class RechargeController {
 
